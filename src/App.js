@@ -8,6 +8,7 @@ import Footer from './pages/Common/Footer/Footer';
 import AboutMe from './pages/About/AboutMe';
 import Registration from './pages/Login/Registration/Registration';
 import Blog from './pages/Blog/Blog';
+import NotFound404 from './pages/404ErrPage/NotFound404';
 
 function App() {
   return (
@@ -15,14 +16,14 @@ function App() {
 
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="home" element={<Home/>}></Route>
-        <Route path="blog" element={<Blog/>}></Route>
-        <Route path="about" element={<AboutMe/>}></Route>
-        <Route path="login" element={<Login/>}></Route>
-        <Route path="registration" element={<Registration/>}></Route>
-        <Route path="*" element={<Home/>}></Route> 
-    </Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="home" element={<Home />}></Route>
+        <Route path="blog" element={<Blog />}></Route>
+        <Route path="about" element={<AboutMe />}></Route>
+        <Route path="login" element={<Login />}></Route>
+        <Route path="registration" element={<Registration />}></Route>
+        <Route path="*" element={<NotFound404/>}></Route>
+      </Routes>
       <Footer></Footer>
 
     </div>

@@ -1,0 +1,32 @@
+[
+    {
+        " id": 1,
+        "img": "https://i.ibb.co/Xb95kwC/c1.jpg",
+        "name": "Bronze",
+        "price": "7999",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+    },
+    {
+        " id": 2,
+        "img": "https://i.ibb.co/n7Nr6K5/c5.jpg",
+        "name": "Silver",
+        "price": "10999",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+    },
+    {
+        " id": 3,
+        "img": " https://i.ibb.co/Gn00NBM/c3.jpg ",
+        "name": "Gold",
+        "price": "13999",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+    },
+    {
+        " id": 4,
+        "img": "https://i.ibb.co/1z6KjZc/c4.jpg",
+        "name": "Platinum",
+        "price": "16999",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+    }
+]
+
+
