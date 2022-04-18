@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -64,7 +64,7 @@ const Login = () => {
                 <input type="email" name="email" id="" placeholder='Email Address' required />
                 <input type="password" name="password" id="" placeholder='Password' required />
                 <input type="submit" value="Login" />
-                <p>{errorElement}</p>
+                {errorElement}
             </form>
             <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <p>Don't have an account? <Link className="pe-auto text-decoration-none" onClick={navigateRegistration} to="/registration"> Create new account</Link> </p>

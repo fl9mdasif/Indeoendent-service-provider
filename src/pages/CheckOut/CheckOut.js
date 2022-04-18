@@ -6,7 +6,7 @@ const CheckOut = () => {
     const navigate = useNavigate()
     const handleCheckOut=(event) => {
         event.preventDefault();
-        navigate('/registration')
+        navigate('/thankyou')
     }
     return (
         <div >

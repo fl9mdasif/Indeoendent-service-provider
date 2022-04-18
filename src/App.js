@@ -12,6 +12,7 @@ import NotFound404 from './pages/404ErrPage/NotFound404';
 import CheckOut from './pages/CheckOut/CheckOut';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import Blog from './pages/Home/Blog/Blog';
+import ThankYou from './pages/ThankYou/ThankYou';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="about" element={<AboutMe />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="registration" element={<Registration />}></Route>
+        <Route path="thankyou" element={<ThankYou />}></Route>
         <Route path="checkout" element={
           <RequireAuth>
             <CheckOut />
