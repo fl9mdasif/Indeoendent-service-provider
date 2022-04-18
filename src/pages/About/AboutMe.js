@@ -5,7 +5,7 @@ const AboutMe = () => {
         <div>
             <h3>About Me</h3>
             <div>
-                <p>Name : Anando</p>
+                <p>Name : Md Anando </p>
                 <img src=""/>
                 <p></p>
             </div>
