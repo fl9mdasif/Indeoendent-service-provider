@@ -4,28 +4,28 @@
         "img": "https://i.ibb.co/Xb95kwC/c1.jpg",
         "name": "Bronze",
         "price": "7999",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+        "description": "1 photo album, 20 Premium Photo With wash, 50pieces Raw picture, 30s Video graphy, photo lifetime storage"
     },
     {
         " id": 2,
         "img": "https://i.ibb.co/n7Nr6K5/c5.jpg",
         "name": "Silver",
-        "price": "10999",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+        "price": "11999",
+        "description": "1 photo album, 30 Premium Photo With wash, 60pieces Raw picture, 45s Video graphy, photo lifetime storage."
     },
     {
         " id": 3,
         "img": " https://i.ibb.co/Gn00NBM/c3.jpg ",
         "name": "Gold",
-        "price": "13999",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+        "price": "15999",
+        "description": "2 photo album (1 medium + 1 small),70 Premium Photo With wash, 100pieces Raw picture, 60s Video graphy, photo lifetime storage."
     },
     {
         " id": 4,
         "img": "https://i.ibb.co/1z6KjZc/c4.jpg",
         "name": "Platinum",
-        "price": "16999",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+        "price": "19999",
+        "description": "3 photo album (2 medium + 1 small),90 Premium Photo With wash, 150pieces Raw picture, 90s Video graphy, photo lifetime storage."
     }
 ]
 

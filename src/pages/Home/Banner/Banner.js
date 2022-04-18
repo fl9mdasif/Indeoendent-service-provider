@@ -27,8 +27,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Bronze</h3>
+                    <p>The best click will provide you by CapturedMoment.</p>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -39,8 +39,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Silver</h3>
+                    <p>The best click will provide you by CapturedMoment.</p>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -51,8 +51,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Gold</h3>
+                    <p>The best click will provide you by CapturedMoment.</p>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -64,8 +64,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Platinum</h3>
+                    <p>The best click will provide you by CapturedMoment.</p>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -77,9 +77,9 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>Combo</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    The best click will provide you by CapturedMoment.
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
