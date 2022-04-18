@@ -7,10 +7,11 @@ import Login from './pages/Login/Login/Login';
 import Footer from './pages/Common/Footer/Footer';
 import AboutMe from './pages/About/AboutMe';
 import Registration from './pages/Login/Registration/Registration';
-import Blog from './pages/Blog/Blog';
+
 import NotFound404 from './pages/404ErrPage/NotFound404';
 import CheckOut from './pages/CheckOut/CheckOut';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
+import Blog from './pages/Home/Blog/Blog';
 
 
 function App() {
