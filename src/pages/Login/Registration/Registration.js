@@ -9,9 +9,8 @@ const Registration = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth,{ sendEmailVerification: true});
 
     let errorElement;
 
@@ -20,15 +19,16 @@ const Registration = () => {
     const registrationLogin = (event) => {
         navigate('/login');
     }
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password, { sendEmailVerification: true })
+        await createUserWithEmailAndPassword(email, password);
         navigate('/home');
 
         console.log(name, email, password);
+        console.log(user.currentUser)
     }
     if (user) {
        navigate('/home')

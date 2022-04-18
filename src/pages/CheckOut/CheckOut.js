@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import RequireAuth from '../Login/RequireAuth/RequireAuth';
 import './CheckOut.css'
 
 const CheckOut = () => {
