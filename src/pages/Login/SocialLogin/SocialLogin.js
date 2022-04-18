@@ -18,6 +18,7 @@ const SocialLogin = () => {
     } 
     return (
         <div>
+            <>-------- or --------</>
             <button
              className="btn btn-info w-50 d-block mx-auto my-2"
              onClick={()=>signInWithGoogle()} > 
