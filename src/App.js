@@ -11,6 +11,7 @@ import Blog from './pages/Blog/Blog';
 import NotFound404 from './pages/404ErrPage/NotFound404';
 import CheckOut from './pages/CheckOut/CheckOut';
 
+
 function App() {
   return (
     <div className="App">
@@ -23,8 +24,8 @@ function App() {
         <Route path="about" element={<AboutMe />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="registration" element={<Registration />}></Route>
-        <Route path="checkout" element={<CheckOut />}></Route>
-        <Route path="*" element={<NotFound404/>}></Route>
+        <Route path="checkout" element={<CheckOut/>}></Route>
+        <Route path="*" element={<NotFound404 />}></Route>
       </Routes>
       <Footer></Footer>
 

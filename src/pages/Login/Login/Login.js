@@ -1,6 +1,6 @@
 import React from 'react';
 import {  useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import  './login.css';
 import SocialLogin from '../../Login/SocialLogin/SocialLogin'
@@ -9,6 +9,7 @@ import SocialLogin from '../../Login/SocialLogin/SocialLogin'
 
 
 const Login = () => {
+    const location = useLocation();
     const navigate = useNavigate();
     const [
         signInWithEmailAndPassword,
@@ -20,13 +21,25 @@ const Login = () => {
     const navigateRegistration = (event) => {
         navigate('/registration');
     }
+    let from = location.state?.from?.pathname || "/";
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
     const handleSubmit = (event) => {
         event.preventDefault();
       
         const email = event.target.email.value;
         const password = event.target.password.value;
         signInWithEmailAndPassword(email, password);
-        navigate('/home')
+        if(!user){
+            return;
+        }
+        
         // console.log( email, password);
         console.log(user);
     }
@@ -39,7 +52,7 @@ const Login = () => {
                 <input type="email" name="email" id="" placeholder='Email Address' required/>
                 <input type="password" name="password" id="" placeholder='Password' required/>
                 <input type="submit" value="Login" />
-
+                <p>{errorElement}</p>
             </form>
             <p>Don't have an account? <Link className="pe-auto text-decoration-none" onClick={navigateRegistration} to="/registration"> Create new account</Link> </p>
             <SocialLogin/>
