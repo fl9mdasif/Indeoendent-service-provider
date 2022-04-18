@@ -1,17 +1,20 @@
 
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './login.css';
 import SocialLogin from '../../Login/SocialLogin/SocialLogin';
-
+import { useRef } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // import auth from '../../../firebase.init';
 
 
 const Login = () => {
-    const [email] = useAuthState(auth);
+    // const [email] = useAuthState(auth);
+    const emailRef = useRef('');
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -50,8 +53,13 @@ const Login = () => {
         console.log(user);
     }
     const resetPassword = async () => {
+        const email = emailRef.current.value;
         if (email) {
-            sendPasswordResetEmail(email);
+            await sendPasswordResetEmail(email);
+            toast('Sent email > inbox or Trash Bin ');
+        }
+        else {
+            toast('please enter your email address');
         }
     }
 
@@ -61,14 +69,16 @@ const Login = () => {
             <h2 className="my-4 bg-dark text-white py-3 text-center">Please Login</h2>
             <form onSubmit={handleSubmit}>
 
-                <input type="email" name="email" id="" placeholder='Email Address' required />
+                <input type="email" ref={emailRef} name="email" id="" placeholder='Email Address' required />
                 <input type="password" name="password" id="" placeholder='Password' required />
                 <input type="submit" value="Login" />
-                {errorElement}
+
             </form>
+            {errorElement}
             <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <p>Don't have an account? <Link className="pe-auto text-decoration-none" onClick={navigateRegistration} to="/registration"> Create new account</Link> </p>
             <SocialLogin />
+            <ToastContainer />
         </div>
     );
 };
