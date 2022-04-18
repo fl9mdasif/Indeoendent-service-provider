@@ -13,12 +13,12 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         
-
         console.log( email, password)
     }
     return (
+
         <div className="login-form">
-            <h2 style={{textAlign: 'center'}}>Please Login</h2>
+            <h2 className="my-4 bg-dark text-white py-3 text-center">Please Login</h2>
             <form onSubmit={handleSubmit}>
                 
                 <input type="email" name="email" id="" placeholder='Email Address' required/>
@@ -28,7 +28,7 @@ const Login = () => {
             </form>
             <p>Don't have an account? <Link className="pe-auto text-decoration-none" onClick={navigateRegistration} to="/registration"> Create new account</Link> </p>
         </div>
-    );
+    ); 
 };
 
 export default Login;
