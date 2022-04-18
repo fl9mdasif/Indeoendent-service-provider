@@ -1,6 +1,6 @@
 # Design And Development CapturedMoment a professional photographer portfolio.
 
-This project was developed by @fl9mdasif [capturedmoment.com](https://singular-druid-57c7eb.netlify.app/)
+This project was developed by @fl9mdasif [capturedmoment.com](https://capturedmoment.firebaseapp.com/)
 
 ### `What is inside my project`
 
@@ -14,7 +14,7 @@ This project was developed by @fl9mdasif [capturedmoment.com](https://singular-d
 * email verification 
 * reset password facilities
 
-### `The technology/ Libraries/ fameWork are being used to design & develop  ` [capturedmoment.com](https://singular-druid-57c7eb.netlify.app/)
+### `The technology/ Libraries/ fameWork are being used to design & develop  ` [capturedmoment.com](https://capturedmoment.firebaseapp.com/)
 * React js 
 * React Router
 * Firebase for (Authenticaion + database + hosting)
