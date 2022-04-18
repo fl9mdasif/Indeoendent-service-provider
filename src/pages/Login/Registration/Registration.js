@@ -1,8 +1,17 @@
 import React from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import './Registration.css'
+import SocialLogin from '../../Login/SocialLogin/SocialLogin'
 
 const Registration = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigate = useNavigate()
     
@@ -14,9 +23,15 @@ const Registration = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        
+        createUserWithEmailAndPassword(email, password,{sendEmailVerification: true})
+        navigate('/home');
 
-        console.log(name, email, password)
+        console.log(name, email, password);
+    }
+
+    let errorElement;
+    if (error ) {
+        errorElement = <p className='text-danger'>Error: {error?.message} </p>
     }
     return (
         <div className='register-form'>
@@ -30,6 +45,8 @@ const Registration = () => {
                 <input type="submit" value="Register" />
             </form>
             <p>Already have an account? <Link className="pe-auto text-decoration-none" onClick={registrationLogin}  to="/login">Login</Link> </p>
+            <p>{errorElement}</p>
+            <SocialLogin/>
         </div>
     );
 };

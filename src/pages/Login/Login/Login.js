@@ -1,8 +1,21 @@
 import React from 'react';
+import {  useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
-import './login.css'
+import auth from '../../../firebase.init';
+import  './login.css';
+import SocialLogin from '../../Login/SocialLogin/SocialLogin'
+
+// import auth from '../../../firebase.init';
+
+
 const Login = () => {
     const navigate = useNavigate();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
 
     const navigateRegistration = (event) => {
         navigate('/registration');
@@ -12,8 +25,10 @@ const Login = () => {
       
         const email = event.target.email.value;
         const password = event.target.password.value;
-        
-        console.log( email, password)
+        signInWithEmailAndPassword(email, password);
+        navigate('/home')
+        // console.log( email, password);
+        console.log(user);
     }
     return (
 
@@ -23,10 +38,11 @@ const Login = () => {
                 
                 <input type="email" name="email" id="" placeholder='Email Address' required/>
                 <input type="password" name="password" id="" placeholder='Password' required/>
-                <input type="submit" value="Register" />
+                <input type="submit" value="Login" />
 
             </form>
             <p>Don't have an account? <Link className="pe-auto text-decoration-none" onClick={navigateRegistration} to="/registration"> Create new account</Link> </p>
+            <SocialLogin/>
         </div>
     ); 
 };
